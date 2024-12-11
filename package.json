@@ -1,5 +1,5 @@
 {
-  "name": "@scaffold-stark-2/stark-burner",
+  "name": "@scaffold-stark/stark-burner",
   "version": "0.1.0",
   "description": "Burner wallet connector for Starknet",
   "main": "dist/index.js",
