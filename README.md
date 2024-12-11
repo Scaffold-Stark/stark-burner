@@ -5,17 +5,17 @@ A burner wallet connector for Starknet applications.
 ## Installation
 
 ```bash
-npm install @scaffold-stark-2/stark-burner
+npm install @scaffold-stark/stark-burner
 ```
 or
 ```bash
-yarn add @scaffold-stark-2/stark-burner
+yarn add @scaffold-stark/stark-burner
 ```
 
 ## Usage
 
 ```tsx
-import { BurnerConnector } from '@scaffold-stark-2/stark-burner';
+import { BurnerConnector } from '@scaffold-stark/stark-burner';
 
 const connector = new BurnerConnector();
 ```
