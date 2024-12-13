@@ -1,7 +1,15 @@
 {
   "name": "@scaffold-stark/stark-burner",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "description": "Burner wallet connector for Starknet",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
