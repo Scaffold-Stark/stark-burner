@@ -24,13 +24,19 @@ jobs:
         run: |
           PREVIOUS_TAG=$(git describe --tags --abbrev=0 HEAD^ 2>/dev/null || echo "")
           if [ -z "$PREVIOUS_TAG" ]; then
-            echo "CHANGELOG<<EOF" >> $GITHUB_ENV
-            git log --pretty=format:"* %s" >> $GITHUB_ENV
-            echo "EOF" >> $GITHUB_ENV
+            {
+              echo 'CHANGELOG<<ENDOFCHANGELOG'
+              git log --pretty=format:"* %s"
+              echo
+              echo 'ENDOFCHANGELOG'
+            } >> $GITHUB_ENV
           else
-            echo "CHANGELOG<<EOF" >> $GITHUB_ENV
-            git log --pretty=format:"* %s" $PREVIOUS_TAG..HEAD >> $GITHUB_ENV
-            echo "EOF" >> $GITHUB_ENV
+            {
+              echo 'CHANGELOG<<ENDOFCHANGELOG'
+              git log --pretty=format:"* %s" $PREVIOUS_TAG..HEAD
+              echo
+              echo 'ENDOFCHANGELOG'
+            } >> $GITHUB_ENV
           fi
 
       - run: npm ci
