@@ -41,6 +41,9 @@ jobs:
 
       - run: npm ci
 
+      - name: Build
+        run: npm run build
+
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
