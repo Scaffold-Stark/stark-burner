@@ -6,6 +6,7 @@ import {
   AccountInterface,
   CallData,
   RpcProvider,
+  constants
 } from "starknet";
 import {
   ConnectorData,
@@ -58,7 +59,7 @@ export class BurnerConnector extends InjectedConnector {
         this.burnerAccount.accountAddress,
         this.burnerAccount.privateKey,
         "1",
-        "0x2",
+        constants.TRANSACTION_VERSION.V3,
       ),
     );
   }
