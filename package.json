@@ -1,7 +1,7 @@
 {
   "name": "@scaffold-stark/stark-burner",
   "version": "0.1.10",
-  "description": "Burner wallet connector for Starknet",
+  "description": "Burner wallet connector for Starknet devnet",
   "type": "module",
   "exports": {
     ".": {
