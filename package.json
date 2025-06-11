@@ -31,8 +31,7 @@
     "build": "tsup",
     "lint": "eslint src/**/*.ts",
     "clean": "rm -rf dist",
-    "prepublishOnly": "npm run build",
-    "test": "node --experimental-vm-modules test/test-burner.ts"
+    "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
     "@starknet-react/chains": "^4.0.1-beta.2",
