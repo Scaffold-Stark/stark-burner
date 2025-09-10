@@ -1,4 +1,4 @@
-import { InjectedConnector } from "@starknet-react/core";
+import { InjectedConnector, starknetChainId } from "@starknet-react/core";
 import {
   Account,
   AccountInterface,
@@ -47,23 +47,11 @@ export class BurnerConnector extends InjectedConnector {
   }
 
   async account(): Promise<AccountInterface> {
-    // return Promise.resolve(
-    //   new Account(
-    //     new RpcProvider({
-    //       nodeUrl: this.chain.rpcUrls.public.http[0],
-    //       // chainId: starknetChainId(this.chain.id), // TODO : check how this affects wrong network. can we get this from the chain directly ?
-    //     }),
-    //     this.burnerAccount.accountAddress,
-    //     this.burnerAccount.privateKey,
-    //     "1",
-    //     constants.TRANSACTION_VERSION.V3,
-    //   ),
-    // );
-
     return Promise.resolve(
       new Account({
         provider: new RpcProvider({
           nodeUrl: this.chain.rpcUrls.public.http[0],
+          chainId: starknetChainId(this.chain.id),
         }),
         address: this.burnerAccount.accountAddress,
         signer: this.burnerAccount.privateKey,
