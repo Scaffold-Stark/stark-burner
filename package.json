@@ -34,18 +34,18 @@
     "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
-    "@starknet-react/chains": "^4.0.1-beta.2",
-    "@starknet-react/core": "^4.0.1-beta.3",
-    "starknet": "^7.5.0"
+    "@starknet-react/chains": "^5.0.1",
+    "@starknet-react/core": "^5.0.1",
+    "starknet": "^8.5.3"
   },
   "dependencies": {
     "@starknet-io/types-js": "^0.8.4"
   },
   "devDependencies": {
-    "@starknet-react/chains": "^4.0.1-beta.2",
-    "@starknet-react/core": "^4.0.1-beta.3",
+    "@starknet-react/chains": "^5.0.1",
+    "@starknet-react/core": "^5.0.1",
     "eslint": "^9.13.0",
-    "starknet": "^7.5.0",
+    "starknet": "^8.5.3",
     "tsup": "^8.3.0",
     "typescript": "^5.6.2"
   },
