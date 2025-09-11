@@ -94,11 +94,13 @@ export class BurnerConnector extends InjectedConnector {
           element.entrypoint = element.entry_point;
           // element.calldata.__compiled__ = true;
         });
-        return await (
-          await this.account()
-        )
+        const account = await this.account();
+        const tip = (
+          await account.getEstimateTip("latest", { minTxsNecessary: 1 })
+        ).recommendedTip;
+        return await account
           //@ts-ignore
-          .execute(compiledCalls);
+          .execute(compiledCalls, { tip });
       } catch (e) {
         throw e;
       }
