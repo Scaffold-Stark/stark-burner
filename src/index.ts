@@ -1,3 +1,7 @@
-export * from './connector';
-export * from './errors';
-export * from './devnetAccounts';
+export {
+  createBurnerWallet,
+  burnerWalletId,
+  burnerWalletName,
+} from "./connector";
+export * from "./errors";
+export { burnerAccounts, type BurnerAccount } from "./devnetAccounts";
